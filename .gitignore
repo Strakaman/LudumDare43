@@ -5,6 +5,9 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
+# Project Version file - prevent incompatibility between Unity versions
+LudumDare43/ProjectSettings/ProjectVersion.txt
+
 # Visual Studio cache directory
 .vs/
 
