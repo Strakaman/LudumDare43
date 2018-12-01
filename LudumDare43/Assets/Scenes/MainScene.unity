@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4369663, g: 0.48464346, b: 0.56490153, a: 1}
+  m_IndirectSpecularColor: {r: 0.43696618, g: 0.48464334, b: 0.5649015, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4506,7 +4506,8 @@ MonoBehaviour:
   currentBlood: 0
   damageImage: {fileID: 791641385}
   flashspeed: 5
-  flashColor: {r: 1, g: 0, b: 0.1, a: 1}
+  damageFlash: {r: 1, g: 0, b: 0.1, a: 1}
+  healFlash: {r: 0, g: 1, b: 0.1, a: 1}
   flashThreshold: 10
   deathClip: {fileID: 8300000, guid: 6a8e6724a7d022b4a94dd967ad1ffcb8, type: 3}
 --- !u!1 &1527755117

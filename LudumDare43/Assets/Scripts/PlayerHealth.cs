@@ -64,7 +64,7 @@ public class PlayerHealth : MonoBehaviour
 
 		// Reset damaged and healed every frame
 		damaged = false;
-		
+		healed = false;
 	}
 
 	// Hurt the player - call from other classes
@@ -105,6 +105,10 @@ public class PlayerHealth : MonoBehaviour
 		healed = true;
 
 		currentHealth += amount;
+		if (currentHealth > startingHealth)
+		{
+			currentHealth = startingHealth;
+		}
 
 		// Set Health Bar
 		// This assumes health bar is int based and not fraction based
@@ -113,6 +117,28 @@ public class PlayerHealth : MonoBehaviour
 
 		// Play heal sound
 
+	}
+
+	public void AddBlood(int amount)
+	{
+		currentBlood += amount;
+		
+
+		// Update Blood HUD
+		Debug.Log("Blood: " + currentBlood.ToString());
+	}
+
+	// Sacrifice method empties as much blood
+	// Add logic to prevent over healing/save blood?
+	public int SacrificeBlood()
+	{
+		int blood = currentBlood;
+		currentBlood = 0;
+
+		// Update Blood HUD
+		Debug.Log("Blood: " + currentBlood.ToString());
+
+		return blood;
 	}
 
 	// Kill the player
