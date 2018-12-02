@@ -941,6 +941,8 @@ GameObject:
   - component: {fileID: 114600688026945372}
   - component: {fileID: 54613051257706920}
   - component: {fileID: 114095215044033354}
+  - component: {fileID: 114875835983665196}
+  - component: {fileID: 114662838749587020}
   m_Layer: 0
   m_Name: PT_Medieval_Peasant_01_c
   m_TagString: Untagged
@@ -2193,6 +2195,34 @@ MonoBehaviour:
   moveCountdown: 5
   stayAround: {fileID: 0}
   moveRadius: 30
+--- !u!114 &114662838749587020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1822559647289274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3acf0cbd04244daca59c5444a8a0530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updatesPerSecond: 10
+--- !u!114 &114875835983665196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1822559647289274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e079a84182040b18ee601cdab151f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+  deathClip: {fileID: 0}
 --- !u!136 &136055516024218968
 CapsuleCollider:
   m_ObjectHideFlags: 1

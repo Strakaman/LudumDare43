@@ -295,6 +295,8 @@ GameObject:
   - component: {fileID: 114568940632788694}
   - component: {fileID: 54486820143018846}
   - component: {fileID: 114774154010979874}
+  - component: {fileID: 114525052219479764}
+  - component: {fileID: 114024274321237146}
   m_Layer: 0
   m_Name: PT_Medieval_Peasant_01_d
   m_TagString: Untagged
@@ -2167,6 +2169,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114024274321237146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354282594269492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3acf0cbd04244daca59c5444a8a0530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updatesPerSecond: 10
+--- !u!114 &114525052219479764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354282594269492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e079a84182040b18ee601cdab151f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+  deathClip: {fileID: 0}
 --- !u!114 &114568940632788694
 MonoBehaviour:
   m_ObjectHideFlags: 1
