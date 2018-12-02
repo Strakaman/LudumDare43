@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class getAxeSpell : ISpell
+public class getAxedSpell : ISpell
 {
     public int damage = 10;
 
