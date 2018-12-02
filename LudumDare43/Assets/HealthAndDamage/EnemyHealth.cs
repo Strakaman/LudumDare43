@@ -102,6 +102,13 @@ public class EnemyHealth : MonoBehaviour
 
             GameObject createdBloodParticle = Instantiate(bloodReturn, particleSpawnPosition, Quaternion.identity, this.GetComponent<Transform>().parent);
             createdBloodParticle.GetComponent<Rigidbody>().AddExplosionForce(5f, Vector3.up, 5f);
+
+            // Fill particle with random blood amount
+            // One particle per 20 enemy hp
+            // Returns on average half their health as blood
+            // Keeps the player hungry
+            int blood = 10 + Mathf.RoundToInt(Random.Range(-5.0f, 5.0f));
+            createdBloodParticle.GetComponent<BloodToPlayer>().FillPints(blood);
         }
 
         Destroy(gameObject);

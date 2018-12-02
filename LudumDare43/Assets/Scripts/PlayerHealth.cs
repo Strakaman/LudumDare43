@@ -144,9 +144,9 @@ public class PlayerHealth : MonoBehaviour
 		healed = true;
 
 		currentHealth += amount;
-		if (currentHealth > startingHealth)
+		if (currentHealth > maximumHealth)
 		{
-			currentHealth = startingHealth;
+			currentHealth = maximumHealth;
 		}
 
 		// Set Health Bar
@@ -162,6 +162,10 @@ public class PlayerHealth : MonoBehaviour
 	public void AddBlood(int amount)
 	{
 		currentBlood += amount;
+        if (currentBlood > maximumBlood)
+        {
+            currentBlood = maximumBlood;
+        }
 		
 
 		// Update Blood HUD
@@ -187,8 +191,8 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if(other.CompareTag("Blood"))
 		{
-			// Absorb blood and add it to the blood bank
-			//AddBlood(other.GetComponent<Blood>().quantity);
+            // Absorb blood and add it to the blood bank
+            AddBlood(other.GetComponent<BloodToPlayer>().Pints);
 			Destroy(other.gameObject);
 
 			Debug.Log("I TASTE BLOOD");

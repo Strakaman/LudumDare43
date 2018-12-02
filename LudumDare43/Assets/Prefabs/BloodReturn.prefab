@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 199130802726360828}
   - component: {fileID: 135339609787324360}
   - component: {fileID: 54728233021623714}
-  - component: {fileID: 114761987945460200}
+  - component: {fileID: 114866096580153184}
   m_Layer: 0
   m_Name: BloodReturn
-  m_TagString: Untagged
+  m_TagString: Blood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114761987945460200
+--- !u!114 &114866096580153184
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,9 +67,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1872923514639502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c49e6e8da3a14ee7a87839d6cb4fd81, type: 3}
+  m_Script: {fileID: 11500000, guid: 436d8c0181e487649887b28a8046aa89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pints: 0
   playerTransform: {fileID: 0}
 --- !u!135 &135339609787324360
 SphereCollider:
@@ -81,7 +82,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.01
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 2.5000002}
 --- !u!198 &198514329663385364
 ParticleSystem:
