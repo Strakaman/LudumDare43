@@ -96,6 +96,7 @@ public class PlayerHealth : MonoBehaviour
         {
             yield return new WaitForSeconds(dyingInterval);
             currentHealth -= dyingDamagePerInterval;
+            playerHealthBar.ChangeValueCurrent(dyingDamagePerInterval * -1);
             CheckIfDead();
         }
     }
