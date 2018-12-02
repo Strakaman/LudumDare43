@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
         playerHealthBar.SetValueCurrent(startingHealth);  //Yes we have duplicate trackers for health/Blood, the gui object doesnt have a method to read the current health so im still using Noah's Tracker in addition
         playerBloodBar.SetValueMin(minimumBlood);
         playerBloodBar.SetValueMax(maximumBlood);
-        playerBloodBar.SetValueCurrent(100);
+        playerBloodBar.SetValueCurrent(50);
 		currentHealth = startingHealth;
 		currentBlood = 100;
 		Debug.Log("Starting Health: " + startingHealth.ToString());
