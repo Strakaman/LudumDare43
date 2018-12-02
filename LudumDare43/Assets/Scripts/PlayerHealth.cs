@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public int minimumBlood = 0;                        // Sets minimum health value (the 0%) for GUI Bloodbar
     public int maximumBlood = 100;                      // Sets maximum health value (100% #) for GUI Bloodbar
 	public int currentHealth;                           // Current player health
-	public int currentBlood = 100;                            // Blood that player has
+	public int currentBlood;                            // Blood that player has
 	public Image damageImage;                           // Ref to image that flashes on player damage
 	public float flashspeed = 5f;                       // Speed that image damage image fades at
 	public Color damageFlash = new Color(1f, 0f, 0.1f); // Color of damage image to flash
@@ -41,15 +41,17 @@ public class PlayerHealth : MonoBehaviour
 		playerMovement = GetComponent<vThirdPersonInput>();
 		spellBook = GetComponent<SpellBook>();
 
-		// Set the initial health and blood
+        // Set the initial health and blood
+        currentHealth = startingHealth;
         playerHealthBar.SetValueMin(minimumHealth);
         playerHealthBar.SetValueMax(maximumHealth);
-        playerHealthBar.SetValueCurrent(startingHealth);  //Yes we have duplicate trackers for health/Blood, the gui object doesnt have a method to read the current health so im still using Noah's Tracker in addition
+        playerHealthBar.SetValueCurrent(currentHealth);
+
+        currentBlood = 0;
         playerBloodBar.SetValueMin(minimumBlood);
         playerBloodBar.SetValueMax(maximumBlood);
-        playerBloodBar.SetValueCurrent(50);
-		currentHealth = startingHealth;
-		currentBlood = 100;
+        playerBloodBar.SetValueCurrent(currentBlood);
+		
 		Debug.Log("Starting Health: " + startingHealth.ToString());
 		Debug.Log("Starting Blood: " + currentBlood.ToString());
 
@@ -63,6 +65,16 @@ public class PlayerHealth : MonoBehaviour
     {
         StartCoroutine(SlowlyDamage());
     }
+
+    private void OnGUI()
+    {
+        if (isDead)
+        {
+            GUI.Label(new Rect((Screen.width/2), (Screen.height/2), 400, 100), "RIP");
+
+        }
+    }
+
     // Update is called once per frame
     void Update()
 	{
