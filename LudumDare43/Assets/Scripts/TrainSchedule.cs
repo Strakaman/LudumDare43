@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TrainSchedule : MonoBehaviour {
 
+    public HazardTrain the_train;
 	// Use this for initialization
 	void Start () {
         StartCoroutine(TrainIsOnTime());
@@ -15,8 +16,8 @@ public class TrainSchedule : MonoBehaviour {
     {
         while (!GameController.instance.GameOver)
         {
-
             yield return new WaitForSeconds(trainCoolDownTime);
+            the_train.StartTrain();
         }
     }
 }
