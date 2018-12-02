@@ -72,6 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pints: 0
   playerTransform: {fileID: 0}
+  speed: 20
 --- !u!135 &135339609787324360
 SphereCollider:
   m_ObjectHideFlags: 1

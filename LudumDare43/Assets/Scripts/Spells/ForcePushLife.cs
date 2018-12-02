@@ -35,7 +35,7 @@ public class ForcePushLife : MonoBehaviour
 
 	IEnumerator DealDamageAfterWait(EnemyHealth enemy)
 	{
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(1f);
 		enemy.TakeDamage(damage, new Vector3 (0f, 0f, 0f));
 	}
 	void SelfDestruct()

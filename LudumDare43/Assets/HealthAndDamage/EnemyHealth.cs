@@ -107,7 +107,7 @@ public class EnemyHealth : MonoBehaviour
             // One particle per 20 enemy hp
             // Returns on average half their health as blood
             // Keeps the player hungry
-            int blood = 10 + Mathf.RoundToInt(Random.Range(-5.0f, 5.0f));
+            int blood = Mathf.RoundToInt(Random.Range(0.0f, 5.0f));
             createdBloodParticle.GetComponent<BloodToPlayer>().FillPints(blood);
         }
 
