@@ -14,7 +14,7 @@ public class MakeItTrain : ISpell
     public override void Execute()
     {
         Quaternion spawnRotation = transform.rotation;
-        Vector3 spawnPosition = transform.position + spawnRotation * (new Vector3(0f, -10f, -25f));
+        Vector3 spawnPosition = transform.position + spawnRotation * (new Vector3(0f, -15f, -25f));
 
         GameObject createProjectile = Instantiate(TrainDrops, spawnPosition, spawnRotation);
 
