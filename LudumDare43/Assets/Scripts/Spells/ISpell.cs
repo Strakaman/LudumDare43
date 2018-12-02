@@ -1,6 +1,8 @@
-﻿public interface ISpell
-{
-	int cooldown { get; set; }
+﻿using UnityEngine;
 
-	void Execute();
+public abstract class ISpell : MonoBehaviour
+{
+	public int cooldown { get; set; }
+
+	abstract public void Execute();
 }

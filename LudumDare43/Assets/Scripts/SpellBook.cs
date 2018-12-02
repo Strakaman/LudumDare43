@@ -1,27 +1,87 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SpellBook : MonoBehaviour {
+public class SpellBook : MonoBehaviour
+{
+    public ISpell[] mySpells  = new ISpell[1];
+    private bool[] onCooldown = new bool[1];
+    private bool cannotCast = false;
 
-    public GameObject BloodBallPrefab;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetButtonDown("Fire1"))
-        {
-            BloodBall();
-        }
-	}
-
-    void BloodBall()
+    public void Start()
     {
-        Vector3 spawnPosition = transform.position + new Vector3(0, 1.5f, 0);
-        GameObject createdObj =  Instantiate(BloodBallPrefab, spawnPosition,Quaternion.identity);
-        createdObj.GetComponent<BloodBall>().ShootProjectile(new Vector3(5, 0, 5));
+
+        for (int i = 0; i < 1; ++i)
+        {
+            onCooldown[i] = false;
+        }
+    }
+
+    private void OnGui()
+    {
+        if (cannotCast)
+        {
+            GUI.Label(new Rect((Screen.width/2)-200, 50, 400, 100), "CANNOT CAST SPELL - ON COOLDOWN");
+        }
+
+    }
+
+    private void Update()
+    {
+        int currentSpell;
+        // Check if spell was cast, else do nothing with currentSpell
+        if (Input.GetButtonDown("Fire1"))
+        {
+            currentSpell = 0;
+        }
+        /*
+        else if (Input.GetButtonDown("Spell_2"))
+        {
+            currentSpell = 1;
+        }
+        else if (Input.GetButtonDown("Spell_3"))
+        {
+            currentSpell = 2;
+        }
+        else if (Input.GetButtonDown("Spell_4"))
+        {
+            currentSpell = 3;
+        }
+        else if (Input.GetButtonDown("Spell_5"))
+        {
+            currentSpell = 4;
+        }
+        */
+        else
+        {
+            return;
+        }
+
+        // Cast spell if not on cooldown
+        if (onCooldown[currentSpell])
+        {
+            cannotCast = true;
+            Invoke("ResetCannotCast", 1);
+        }
+        else
+        {
+            mySpells[currentSpell].Execute();
+            onCooldown[currentSpell] = true;
+            StartCoroutine(ResetSpell(currentSpell));
+            // UPDATE THE HUD TO SHOW SPELL ON COOLDOWN
+        }
+        
+        return;
+    }
+
+    private IEnumerator ResetSpell(int spellIdx)
+    {
+        yield return new WaitForSeconds(mySpells[spellIdx].cooldown);
+
+        onCooldown[spellIdx] = false;
+    }
+
+    private void ResetCannotCast()
+    {
+        cannotCast = false;
     }
 }
