@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class SpellBook : MonoBehaviour
 {
-    public ISpell[] mySpells  = new ISpell[1];
-    private bool[] onCooldown = new bool[1];
+    public ISpell[] mySpells  = new ISpell[3];
+    private bool[] onCooldown = new bool[3];
     private bool cannotCast = false;
 
     public void Start()
     {
 
-        for (int i = 0; i < 1; ++i)
+        for (int i = 0; i < 3; ++i)
         {
             onCooldown[i] = false;
         }
@@ -33,15 +33,17 @@ public class SpellBook : MonoBehaviour
         {
             currentSpell = 0;
         }
-        /*
-        else if (Input.GetButtonDown("Spell_2"))
+        
+        else if (Input.GetButtonDown("Fire2"))
         {
             currentSpell = 1;
         }
-        else if (Input.GetButtonDown("Spell_3"))
+      
+        else if (Input.GetButtonDown("Fire3"))
         {
             currentSpell = 2;
         }
+        /*
         else if (Input.GetButtonDown("Spell_4"))
         {
             currentSpell = 3;
