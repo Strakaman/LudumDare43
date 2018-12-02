@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
-  m_IndirectSpecularColor: {r: 0.4369663, g: 0.48464346, b: 0.56490153, a: 1}
-=======
   m_IndirectSpecularColor: {r: 0.4369663, g: 0.48464316, b: 0.56490165, a: 1}
->>>>>>> 7452d055328ffff6ca0de7a9e86b7e8a5c24a746
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1266,10 +1262,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
-<<<<<<< HEAD
-  damage: 10
-=======
->>>>>>> 7452d055328ffff6ca0de7a9e86b7e8a5c24a746
   projectileSpeed: 5
   BloodProjectile: {fileID: 1872923514639502, guid: d08a3a6ecd506cc44b427b4ce97e9ba9,
     type: 2}
