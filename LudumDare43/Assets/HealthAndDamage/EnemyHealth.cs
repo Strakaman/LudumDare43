@@ -9,6 +9,8 @@ public class EnemyHealth : MonoBehaviour
     public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
     public AudioClip deathClip;                 // The sound to play when the enemy dies.
 
+    public GameObject bloodReturn;
+
 
     //Animator anim;                              // Reference to the animator.
     AudioSource enemyAudio;                     // Reference to the audio source.
@@ -87,6 +89,21 @@ public class EnemyHealth : MonoBehaviour
         enemyAudio.clip = deathClip;
         enemyAudio.Play ();
 
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        int numberOfBloodReturnSpawn = startingHealth / 20;
+        for (var i = 0; i < numberOfBloodReturnSpawn; ++i)
+        {
+            const float PARTICLE_SPAWN_RADIUS = 2f;
+            Vector3 particleSpawnPosition;
+            particleSpawnPosition.x = Random.value * PARTICLE_SPAWN_RADIUS;
+            particleSpawnPosition.y = Random.value * PARTICLE_SPAWN_RADIUS;
+            particleSpawnPosition.z = Random.value * PARTICLE_SPAWN_RADIUS;
+            particleSpawnPosition += this.transform.position;
+
+            GameObject createdBloodParticle = Instantiate(bloodReturn, particleSpawnPosition, Quaternion.identity, this.GetComponent<Transform>().parent);
+            createdBloodParticle.GetComponent<Rigidbody>().AddExplosionForce(5f, Vector3.up, 5f);
+        }
+
         Destroy(gameObject);
     }
 
@@ -101,10 +118,6 @@ public class EnemyHealth : MonoBehaviour
 
         // The enemy should no sink.
         isSinking = true;
-
-        // TODO: blood
-        //// Increase the score by the enemy's score value.
-        //ScoreManager.score += scoreValue;
 
         // After 2 seconds destory the nemy.
         Destroy (gameObject, 2f);

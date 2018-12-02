@@ -2162,7 +2162,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c3175e530dde8934ca3ce57a3f895067, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2207,7 +2207,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.907
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2293,6 +2293,8 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 0}
+  bloodReturn: {fileID: 1872923514639502, guid: 066f597de6dae4562b8c29b6bcbec081,
+    type: 2}
 --- !u!114 &114568940632788694
 MonoBehaviour:
   m_ObjectHideFlags: 1
