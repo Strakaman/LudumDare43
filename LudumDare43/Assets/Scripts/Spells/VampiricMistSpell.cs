@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 
-public class BloodBall : ISpell
+public class VampiricMistSpell : ISpell
 {
 	public int damage = 10;
+	public float projectileSpeed = 5;
 
 	public GameObject BloodProjectile;
 
@@ -18,7 +19,8 @@ public class BloodBall : ISpell
 		
 		GameObject createProjectile = Instantiate(BloodProjectile, spawnPosition, spawnRotation);
 
-		createProjectile.GetComponent<Rigidbody>().velocity = spawnRotation	* (new Vector3(0f, 0f, -5f));
+		createProjectile.GetComponent<Rigidbody>().velocity = spawnRotation	* (new Vector3(0f, 0f, -projectileSpeed));
+
 	}
 
 }
