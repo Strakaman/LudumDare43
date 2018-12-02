@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class TrainWreck : MonoBehaviour {
 
-    public int Damage = 10000;
-
-    private void OnCollisionEnter(Collision collision)
+    public int Damage = 100;
+    private void OnTriggerEnter(Collider other)
     {
-        if ( collision.gameObject.CompareTag("Enemy")) 
+        if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Train hit " + collision.gameObject.name);
+            other.GetComponent<EnemyHealth>().TakeDamage(Damage, new Vector3(0f, 0f, 0f));
         }
     }
 }
