@@ -5705,6 +5705,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1549922784}
   m_Mesh: {fileID: 4300000, guid: fbc9f22f2895240469c96e194195651d, type: 2}
+--- !u!114 &1558136260 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114660360410244340, guid: d61b1c479a1571643a7b6296b1026b17,
+    type: 2}
+  m_PrefabInternal: {fileID: 1427865563}
+  m_Script: {fileID: 11500000, guid: d2c1b4a024495ca4daeac158f4edba14, type: 3}
 --- !u!1 &1597762314
 GameObject:
   m_ObjectHideFlags: 0
@@ -5865,6 +5871,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1654127446}
   m_Mesh: {fileID: 4300000, guid: fbc9f22f2895240469c96e194195651d, type: 2}
+--- !u!114 &1684235807 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114667401429583922, guid: d61b1c479a1571643a7b6296b1026b17,
+    type: 2}
+  m_PrefabInternal: {fileID: 1427865563}
+  m_Script: {fileID: 11500000, guid: d2c1b4a024495ca4daeac158f4edba14, type: 3}
 --- !u!1 &1690282356
 GameObject:
   m_ObjectHideFlags: 0
@@ -6035,6 +6047,12 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1797703943 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114209828402952092, guid: d61b1c479a1571643a7b6296b1026b17,
+    type: 2}
+  m_PrefabInternal: {fileID: 1427865563}
+  m_Script: {fileID: 11500000, guid: d2c1b4a024495ca4daeac158f4edba14, type: 3}
 --- !u!1 &1810993208
 GameObject:
   m_ObjectHideFlags: 0
@@ -6482,6 +6500,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1919934743}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1922427374 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114971030608398376, guid: d61b1c479a1571643a7b6296b1026b17,
+    type: 2}
+  m_PrefabInternal: {fileID: 1427865563}
+  m_Script: {fileID: 11500000, guid: d2c1b4a024495ca4daeac158f4edba14, type: 3}
 --- !u!1 &1951361548
 GameObject:
   m_ObjectHideFlags: 0
@@ -6662,6 +6686,26 @@ Prefab:
       propertyPath: mySpells.Array.data[3]
       value: 
       objectReference: {fileID: 1746095331}
+    - target: {fileID: 114001723580823142, guid: ee2d107a34692a64e95ce85aed5e41f0,
+        type: 2}
+      propertyPath: spellHUDIcons.Array.data[0]
+      value: 
+      objectReference: {fileID: 1558136260}
+    - target: {fileID: 114001723580823142, guid: ee2d107a34692a64e95ce85aed5e41f0,
+        type: 2}
+      propertyPath: spellHUDIcons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1797703943}
+    - target: {fileID: 114001723580823142, guid: ee2d107a34692a64e95ce85aed5e41f0,
+        type: 2}
+      propertyPath: spellHUDIcons.Array.data[3]
+      value: 
+      objectReference: {fileID: 1922427374}
+    - target: {fileID: 114001723580823142, guid: ee2d107a34692a64e95ce85aed5e41f0,
+        type: 2}
+      propertyPath: spellHUDIcons.Array.data[2]
+      value: 
+      objectReference: {fileID: 1684235807}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee2d107a34692a64e95ce85aed5e41f0, type: 2}
   m_IsPrefabAsset: 0

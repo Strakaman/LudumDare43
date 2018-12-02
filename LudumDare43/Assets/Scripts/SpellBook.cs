@@ -5,12 +5,13 @@ public class SpellBook : MonoBehaviour
 {
     public ISpell[] mySpells  = new ISpell[3];
     private bool[] onCooldown = new bool[3];
+    public SpellHUDCircleThingy[] spellHUDIcons = new SpellHUDCircleThingy[4];
     private bool cannotCast = false;
 
     public void Start()
     {
 
-        for (int i = 0; i < 3; ++i)
+        for (int i = 0; i < 4; ++i)
         {
             onCooldown[i] = false;
         }
