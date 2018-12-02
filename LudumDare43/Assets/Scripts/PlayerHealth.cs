@@ -5,15 +5,20 @@ using Invector.CharacterController;
 public class PlayerHealth : MonoBehaviour
 {
 	public int startingHealth = 100;                    // Starting player health
-	public int currentHealth;                           // Current player health
-	//public Slider healthSlider;                       // Ref to UI health bar.
-	public int currentBlood;                            // Blood that player has
+    public int minimumHealth = 0;                       // Sets minimum health value (the 0%) for GUI Healthbar
+    public int maximumHealth = 100;                     // Sets maximum health value (100% #) for GUI Healthbar
+    public int minimumBlood = 0;                        // Sets minimum health value (the 0%) for GUI Bloodbar
+    public int maximumBlood = 100;                      // Sets maximum health value (100% #) for GUI Bloodbar
+    public int currentHealth;                           // Current player health
+	public int currentBlood = 100;                            // Blood that player has
 	public Image damageImage;                           // Ref to image that flashes on player damage
 	public float flashspeed = 5f;                       // Speed that image damage image fades at
 	public Color damageFlash = new Color(1f, 0f, 0.1f); // Color of damage image to flash
 	public Color healFlash = new Color(0f, 1f, 0.1f);   // Color of heal image to flash
 	public int flashThreshold = 10;                     // Damage threshold for screen flash
 	public AudioClip deathClip;                         // Sound played on death
+    public EnergyBar playerHealthBar;                   // GUI Healthbar
+    public EnergyBar playerBloodBar;                    // GUI Bloodbar
 
 	Animator anim;                                      // Ref to Animator component
 	AudioSource playerAudio;                            // Ref to AudioSource component - IS THIS WHERE WE ADD DAMAGE SOUND?
@@ -21,20 +26,29 @@ public class PlayerHealth : MonoBehaviour
 	SpellBook spellBook;                                // Ref to spellbook class
 	bool isDead;                                        // Whether player is dead
 	bool damaged;                                       // When the player gets damaged
-	bool healed;                                       // When the player gets healed
+	bool healed;                                        // When the player gets healed
 
 	// Use this for initialization
 	void Awake()
 	{
+
+
+
 		// Set up references
 		anim = GetComponent<Animator>();
 		playerAudio = GetComponent<AudioSource>();
 		playerMovement = GetComponent<vThirdPersonInput>();
 		spellBook = GetComponent<SpellBook>();
 
-		// Set the initial health and blood
-		currentHealth = startingHealth;
-		currentBlood = 0;
+        // Set the initial health and blood
+        playerHealthBar.SetValueMin(minimumHealth);
+        playerHealthBar.SetValueMax(maximumHealth);
+        playerHealthBar.SetValueCurrent(startingHealth);  //Yes we have duplicate trackers for health/Blood, the gui object doesnt have a method to read the current health so im still using Noah's Tracker in addition
+        playerBloodBar.SetValueMin(minimumBlood);
+        playerBloodBar.SetValueMax(maximumBlood);
+        playerBloodBar.SetValueCurrent(100);
+        currentHealth = startingHealth;
+		currentBlood = 100;
 		Debug.Log("Starting Health: " + startingHealth.ToString());
 		Debug.Log("Starting Blood: " + currentBlood.ToString());
 
@@ -42,7 +56,8 @@ public class PlayerHealth : MonoBehaviour
 		damaged = false;
 		healed = false;
 		damageImage.color = Color.clear;
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update()
@@ -80,13 +95,12 @@ public class PlayerHealth : MonoBehaviour
 				damaged = true;
 			}
 
-			// Damage player
+            // Damage player
 			currentHealth -= amount;
-			
-			// Set Health Bar
-			// This assumes health bar is int based and not fraction based
-			//healthSlider.value = currentHealth;
-			Debug.Log("Health: " + currentHealth.ToString());
+
+            // Set Health Bar
+            playerHealthBar.ChangeValueCurrent((amount * -1));
+            Debug.Log("Health: " + currentHealth.ToString());
 
 			// Play hurt sound
 			// playerAudio.Play();
@@ -110,10 +124,9 @@ public class PlayerHealth : MonoBehaviour
 			currentHealth = startingHealth;
 		}
 
-		// Set Health Bar
-		// This assumes health bar is int based and not fraction based
-		//healthSlider.value = currentHealth;
-		Debug.Log("Health: " + currentHealth.ToString());
+        // Set Health Bar
+        playerHealthBar.ChangeValueCurrent(amount);
+        Debug.Log("Health: " + currentHealth.ToString());
 
 		// Play heal sound
 
@@ -122,9 +135,10 @@ public class PlayerHealth : MonoBehaviour
 	public void AddBlood(int amount)
 	{
 		currentBlood += amount;
-		
 
-		// Update Blood HUD
+
+        // Update Blood HUD
+        playerBloodBar.ChangeValueCurrent(amount);
 		Debug.Log("Blood: " + currentBlood.ToString());
 	}
 
@@ -135,8 +149,9 @@ public class PlayerHealth : MonoBehaviour
 		int blood = currentBlood;
 		currentBlood = 0;
 
-		// Update Blood HUD
-		Debug.Log("Blood: " + currentBlood.ToString());
+        // Update Blood HUD
+        playerBloodBar.SetValueCurrent(0);
+        Debug.Log("Blood: " + currentBlood.ToString());
 
 		return blood;
 	}

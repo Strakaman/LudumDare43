@@ -51,11 +51,12 @@ public class Idol : MonoBehaviour
             // Sacrifice blood here
             if (playerHealth.currentBlood > 0)
             {
+                int bloodToHealthRatio = 1;
                 sacrificeSufficient = SACRIFICE_STATE.Success;
                 int tribute = playerHealth.SacrificeBlood();
                     
                 // Convert blood to health
-                int reward = tribute;
+                int reward = tribute/bloodToHealthRatio;
 
                 // Heal player
                 playerHealth.Heal(reward);
