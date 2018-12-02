@@ -2,7 +2,7 @@
 
 public class BloodBall : ISpell
 {
-	public override int cooldown
+	/*public override int cooldown
 	{
 		get
 		{
@@ -13,15 +13,16 @@ public class BloodBall : ISpell
 		{
 			cooldown = value;
 		}
-	}
+	}*/
 
+	//public int cooldown = 10;
 	public int damage = 10;
 
 	public GameObject BloodProjectile;
 
-	void Awake()
+	void Start()
 	{
-		cooldown = 10;
+		cooldown = 5;
 	}
 
 	public override void Execute()
@@ -30,8 +31,8 @@ public class BloodBall : ISpell
 		Vector3 spawnPosition = transform.position + new Vector3(0f, 1.5f, -1f);
 
 		GameObject createProjectile = Instantiate(BloodProjectile, spawnPosition, Quaternion.identity);
-
-		GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -5f);
+		
+		createProjectile.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -5f);
 	}
 
 

@@ -16,7 +16,7 @@ public class SpellBook : MonoBehaviour
         }
     }
 
-    private void OnGui()
+    private void OnGUI()
     {
         if (cannotCast)
         {
