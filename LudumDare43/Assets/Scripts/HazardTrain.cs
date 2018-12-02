@@ -16,15 +16,21 @@ public class HazardTrain : MonoBehaviour {
     {
         trainVisualHolder.SetActive(true);
         transform.position = startpos;
+        transform.eulerAngles = new Vector3(0, 90, 0);
         frac = 0;
     }
 
-	// Update is called once per frame
-	void Update () {
-        if (frac > 1) {
+    private void FixedUpdate()
+    {
+        if (frac > 1)
+        {
             trainVisualHolder.SetActive(false);
-            return; }
+            return;
+        }
         transform.position = Vector3.Lerp(startpos, endPosition.transform.position, frac);
         frac += .005f;
-	}
+    }
+
 }
+
+
