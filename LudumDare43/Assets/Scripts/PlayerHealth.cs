@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using Invector.CharacterController;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public int maximumHealth = 100;                     // Sets maximum health value (100% #) for GUI Healthbar
     public int minimumBlood = 0;                        // Sets minimum health value (the 0%) for GUI Bloodbar
     public int maximumBlood = 100;                      // Sets maximum health value (100% #) for GUI Bloodbar
-    public int currentHealth;                           // Current player health
+	public int currentHealth;                           // Current player health
 	public int currentBlood = 100;                            // Blood that player has
 	public Image damageImage;                           // Ref to image that flashes on player damage
 	public float flashspeed = 5f;                       // Speed that image damage image fades at
@@ -26,28 +27,28 @@ public class PlayerHealth : MonoBehaviour
 	SpellBook spellBook;                                // Ref to spellbook class
 	bool isDead;                                        // Whether player is dead
 	bool damaged;                                       // When the player gets damaged
-	bool healed;                                        // When the player gets healed
+	bool healed;                                       // When the player gets healed
+
+    public int dyingDamagePerInterval= 1;
+    public float dyingInterval = .5f;
 
 	// Use this for initialization
 	void Awake()
 	{
-
-
-
 		// Set up references
 		anim = GetComponent<Animator>();
 		playerAudio = GetComponent<AudioSource>();
 		playerMovement = GetComponent<vThirdPersonInput>();
 		spellBook = GetComponent<SpellBook>();
 
-        // Set the initial health and blood
+		// Set the initial health and blood
         playerHealthBar.SetValueMin(minimumHealth);
         playerHealthBar.SetValueMax(maximumHealth);
         playerHealthBar.SetValueCurrent(startingHealth);  //Yes we have duplicate trackers for health/Blood, the gui object doesnt have a method to read the current health so im still using Noah's Tracker in addition
         playerBloodBar.SetValueMin(minimumBlood);
         playerBloodBar.SetValueMax(maximumBlood);
         playerBloodBar.SetValueCurrent(100);
-        currentHealth = startingHealth;
+		currentHealth = startingHealth;
 		currentBlood = 100;
 		Debug.Log("Starting Health: " + startingHealth.ToString());
 		Debug.Log("Starting Blood: " + currentBlood.ToString());
@@ -56,11 +57,14 @@ public class PlayerHealth : MonoBehaviour
 		damaged = false;
 		healed = false;
 		damageImage.color = Color.clear;
+	}
 
+    private void Start()
+    {
+        StartCoroutine(SlowlyDamage());
     }
-	
-	// Update is called once per frame
-	void Update()
+    // Update is called once per frame
+    void Update()
 	{
 		// If damaged, flash the damage color on screen
 		// Else, fade damage color away
@@ -80,41 +84,61 @@ public class PlayerHealth : MonoBehaviour
 		// Reset damaged and healed every frame
 		damaged = false;
 		healed = false;
+
+
 	}
 
+    IEnumerator SlowlyDamage()
+    {
+        //player is slowly dying couroutine
+        yield return new WaitForSeconds(2);
+        while (!GameController.instance.GameOver)
+        {
+            yield return new WaitForSeconds(dyingInterval);
+            currentHealth -= dyingDamagePerInterval;
+            CheckIfDead();
+        }
+    }
 	// Hurt the player - call from other classes
 	public void TakeDamage(int amount)
-	{
-		// Only run on live players
-		if (!isDead)
-		{
-			// Player always ticks damage with time
-			// Only set flag on big hits so we don't always flash
-			if (amount >= flashThreshold)
-			{
-				damaged = true;
-			}
+    {
+        // Only run on live players
+        if (!isDead)
+        {
+            // Player always ticks damage with time
+            // Only set flag on big hits so we don't always flash
+            if (amount >= flashThreshold)
+            {
+                damaged = true;
+            }
 
             // Damage player
-			currentHealth -= amount;
+            currentHealth -= amount;
 
             // Set Health Bar
             playerHealthBar.ChangeValueCurrent((amount * -1));
+            // This assumes health bar is int based and not fraction based
+            //healthSlider.value = currentHealth;
             Debug.Log("Health: " + currentHealth.ToString());
 
-			// Play hurt sound
-			// playerAudio.Play();
-		}
+            // Play hurt sound
+            // playerAudio.Play();
+        }
 
-		// Check if player is dead
-		if (currentHealth <= 0 && !isDead)
-		{
-			Death();
-		}
-	}
+        CheckIfDead();
+    }
 
-	// Heal the player - call from other classes
-	public void Heal(int amount)
+    private void CheckIfDead()
+    {
+        // Check if player is dead
+        if (currentHealth <= 0 && !isDead)
+        {
+            Death();
+        }
+    }
+
+    // Heal the player - call from other classes
+    public void Heal(int amount)
 	{
 		healed = true;
 
@@ -124,9 +148,11 @@ public class PlayerHealth : MonoBehaviour
 			currentHealth = startingHealth;
 		}
 
-        // Set Health Bar
+		// Set Health Bar
         playerHealthBar.ChangeValueCurrent(amount);
-        Debug.Log("Health: " + currentHealth.ToString());
+		// This assumes health bar is int based and not fraction based
+		//healthSlider.value = currentHealth;
+		Debug.Log("Health: " + currentHealth.ToString());
 
 		// Play heal sound
 
@@ -135,9 +161,9 @@ public class PlayerHealth : MonoBehaviour
 	public void AddBlood(int amount)
 	{
 		currentBlood += amount;
+		
 
-
-        // Update Blood HUD
+		// Update Blood HUD
         playerBloodBar.ChangeValueCurrent(amount);
 		Debug.Log("Blood: " + currentBlood.ToString());
 	}
@@ -149,9 +175,9 @@ public class PlayerHealth : MonoBehaviour
 		int blood = currentBlood;
 		currentBlood = 0;
 
-        // Update Blood HUD
+		// Update Blood HUD
         playerBloodBar.SetValueCurrent(0);
-        Debug.Log("Blood: " + currentBlood.ToString());
+		Debug.Log("Blood: " + currentBlood.ToString());
 
 		return blood;
 	}
