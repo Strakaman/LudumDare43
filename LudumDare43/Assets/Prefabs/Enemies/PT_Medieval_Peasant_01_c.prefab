@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4691844777190778}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightCape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4394448609231960}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4864612009628962}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4160591438665038}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4053934422971970}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4408800362985678}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftCape4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4339557860002128}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4258382883462132}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_HeadTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4169705134974636}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Right_Hand_Weapon_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4996593610066508}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Spine3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4203290508041348}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4667349962335100}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4553151461110812}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4774736670693300}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4340798634880814}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4987862319051324}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4511237744675170}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4282988613252174}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4946066986637206}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4401590128699648}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Large_Shield_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4826089307125544}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4420717001049830}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4615124532163928}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightCape2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4878825929168236}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4819723986328472}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Second_Weapon_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4346820574753212}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4819285322132792}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4667636528077776}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4846083308632714}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4092822668025066}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4613321266352896}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4048214311651278}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftCape2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4284893628672626}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Medium_Shield_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4225856995411110}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Left_Hand_Weapon_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4735128372713524}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4470747145433574}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4388045688172592}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4833989212251996}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4325764260664022}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4828180097576392}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4200151491836792}
   - component: {fileID: 137210704694096290}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Peasant_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4901918054028684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4216611916095892}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4224402076671552}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftCape3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4975476625400776}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftCape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4465810374182994}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4895921353134492}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftToe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +725,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4548710326433990}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Sheat_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4987239745183290}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightCape3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4384410576529384}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,7 +770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4247362917999252}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4244210018311356}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -800,7 +800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4012094341840498}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Long_Bow_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4741806939086016}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -830,7 +830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4952736525815818}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -845,7 +845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4197577200109798}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4362244043720984}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -875,7 +875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4755795189555228}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Small_Shield_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,7 +890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4447717117714166}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -905,7 +905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4674595799855436}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,7 +920,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4729420872700858}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Medium_Bow_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,7 +944,7 @@ GameObject:
   - component: {fileID: 114875835983665196}
   - component: {fileID: 114662838749587020}
   - component: {fileID: 82534743199058212}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Peasant_01_c
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -959,7 +959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4287244614169078}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -974,7 +974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4520403482632350}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -989,7 +989,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4277708637751072}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_Quiver_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4720022043528208}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1019,7 +1019,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4144165242107830}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4770627108792164}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,7 +1049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4127876707446088}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1064,7 +1064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4900283819562578}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1079,7 +1079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4087411133536046}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightToe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1094,7 +1094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4069253092370512}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1109,7 +1109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4341690733114006}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PT_Medieval_RightCape4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
