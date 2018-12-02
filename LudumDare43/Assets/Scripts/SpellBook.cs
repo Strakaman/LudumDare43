@@ -4,7 +4,7 @@ using UnityEngine;
 public class SpellBook : MonoBehaviour
 {
     public ISpell[] mySpells  = new ISpell[3];
-    private bool[] onCooldown = new bool[3];
+    private bool[] onCooldown = new bool[4];
     public SpellHUDCircleThingy[] spellHUDIcons = new SpellHUDCircleThingy[4];
     private bool cannotCast = false;
 
@@ -69,6 +69,7 @@ public class SpellBook : MonoBehaviour
         {
             mySpells[currentSpell].Execute();
             onCooldown[currentSpell] = true;
+            spellHUDIcons[currentSpell].StartGUICooldown(mySpells[currentSpell].cooldown);
             StartCoroutine(ResetSpell(currentSpell));
             // UPDATE THE HUD TO SHOW SPELL ON COOLDOWN
         }
