@@ -1,14 +1,46 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class BloodBall : MonoBehaviour {
+public class BloodBall : ISpell
+{
+	/*public override int cooldown
+	{
+		get
+		{
+			return cooldown;
+		}
+
+		set
+		{
+			cooldown = value;
+		}
+	}*/
+
+	//public int cooldown = 10;
+	public int damage = 10;
+
+	public GameObject BloodProjectile;
+
+	void Start()
+	{
+		cooldown = 5;
+	}
+
+	public override void Execute()
+	{
+
+		Vector3 spawnPosition = transform.position + new Vector3(0f, 1.5f, -1f);
+
+		GameObject createProjectile = Instantiate(BloodProjectile, spawnPosition, Quaternion.identity);
+		
+		createProjectile.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -5f);
+	}
 
 
+	/*
    public void ShootProjectile(Vector3 velocity)
     {
         GetComponent<Rigidbody>().velocity = velocity;
-    }
+    }*/
 }
 
 // CODE DELETED FROM SPELLBOOK.CS IN CASE WE WANT TO SAVE IT
