@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public bool GameOver = false;
+
     #region instance
     private static GameController s_Instance = null;
     public static GameController instance
