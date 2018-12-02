@@ -8,6 +8,7 @@ public class SpawnManager : MonoBehaviour {
     public GameObject[] enemyType;                // The enemy prefab to be spawned.
     public float spawnTime = 10f;            // How long between each spawn.
     public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
+    public int maxEnemies = 50;
 
 
     void Start()
@@ -25,6 +26,12 @@ public class SpawnManager : MonoBehaviour {
         //    // ... exit the function.
         //    return;
         //}
+
+        int spawnedEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        if (spawnedEnemies > maxEnemies)
+        {
+            return;
+        }
 
         // Find a random index between zero and one less than the number of spawn points.
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
