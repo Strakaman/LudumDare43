@@ -189,7 +189,9 @@ public class PlayerHealth : MonoBehaviour
 		{
 			// Absorb blood and add it to the blood bank
 			//AddBlood(other.GetComponent<Blood>().quantity);
-			Destroy(other.GetComponent<GameObject>());
+			Destroy(other.gameObject);
+
+			Debug.Log("I TASTE BLOOD");
 		}
 	}
 
