@@ -183,6 +183,16 @@ public class PlayerHealth : MonoBehaviour
 		return blood;
 	}
 
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.CompareTag("Blood"))
+		{
+			// Absorb blood and add it to the blood bank
+			//AddBlood(other.GetComponent<Blood>().quantity);
+			Destroy(other.GetComponent<GameObject>());
+		}
+	}
+
 	// Kill the player
 	void Death()
 	{

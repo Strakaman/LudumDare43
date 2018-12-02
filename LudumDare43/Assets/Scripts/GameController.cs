@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public bool GameOver = false;
+    static int latestKills = 0;
     private static PlayerHealth s_player = null;
 
     public PlayerHealth playerGameObject
@@ -16,6 +17,22 @@ public class GameController : MonoBehaviour
                 s_player = FindObjectOfType(typeof(PlayerHealth)) as PlayerHealth;
             }
             return s_player;
+        }
+    }
+
+    void Update()
+    {
+        if (latestKills >= 4)
+        {
+            // play Rampage kill sound
+        }
+        if (latestKills >= 3)
+        {
+            // play triple kill sound
+        }
+        if (latestKills >= 2)
+        {
+            // play double kill
         }
     }
 
@@ -37,6 +54,18 @@ public class GameController : MonoBehaviour
 
             return s_Instance;
         }
+    }
+
+    public static void UpdateKillCounter()
+    {
+        ++latestKills;
+        //int comboSeconds = 3;
+        //Invoke("ResetKillCounter", comboSeconds);
+    }
+
+    void ResetKillCounter()
+    {
+        latestKills = 0;
     }
     #endregion
 }
