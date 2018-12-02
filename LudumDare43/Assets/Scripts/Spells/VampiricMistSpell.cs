@@ -2,7 +2,6 @@
 
 public class VampiricMistSpell : ISpell
 {
-	public int damage = 10;
 	public float projectileSpeed = 5;
 
 	public GameObject BloodProjectile;
