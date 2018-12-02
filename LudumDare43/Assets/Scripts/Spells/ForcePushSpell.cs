@@ -14,7 +14,7 @@ public class ForcePushSpell : ISpell
 	public override void Execute()
 	{
 		Quaternion spawnRotation = transform.rotation;
-		Vector3 spawnPosition = transform.position + spawnRotation * (new Vector3(0f, 1.5f, -3f));
+		Vector3 spawnPosition = transform.position + spawnRotation * (new Vector3(0f, 1.5f, -5f));
 		
 		GameObject createProjectile = Instantiate(ForceProjectile, spawnPosition, spawnRotation);
 
