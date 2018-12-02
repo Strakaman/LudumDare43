@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using Invector.CharacterController;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class PlayerHealth : MonoBehaviour
 	bool damaged;                                       // When the player gets damaged
 	bool healed;                                       // When the player gets healed
 
+    public int dyingDamagePerInterval= 1;
+    public float dyingInterval = .5f;
+
 	// Use this for initialization
 	void Awake()
 	{
@@ -43,9 +47,13 @@ public class PlayerHealth : MonoBehaviour
 		healed = false;
 		damageImage.color = Color.clear;
 	}
-	
-	// Update is called once per frame
-	void Update()
+
+    private void Start()
+    {
+        StartCoroutine(SlowlyDamage());
+    }
+    // Update is called once per frame
+    void Update()
 	{
 		// If damaged, flash the damage color on screen
 		// Else, fade damage color away
@@ -65,42 +73,60 @@ public class PlayerHealth : MonoBehaviour
 		// Reset damaged and healed every frame
 		damaged = false;
 		healed = false;
+
+
 	}
 
+    IEnumerator SlowlyDamage()
+    {
+        //player is slowly dying
+        yield return new WaitForSeconds(2);
+        while (!GameController.instance.GameOver)
+        {
+            yield return new WaitForSeconds(dyingInterval);
+            currentHealth -= dyingDamagePerInterval;
+            CheckIfDead();
+        }
+    }
 	// Hurt the player - call from other classes
 	public void TakeDamage(int amount)
-	{
-		// Only run on live players
-		if (!isDead)
-		{
-			// Player always ticks damage with time
-			// Only set flag on big hits so we don't always flash
-			if (amount >= flashThreshold)
-			{
-				damaged = true;
-			}
+    {
+        // Only run on live players
+        if (!isDead)
+        {
+            // Player always ticks damage with time
+            // Only set flag on big hits so we don't always flash
+            if (amount >= flashThreshold)
+            {
+                damaged = true;
+            }
 
-			// Damage player
-			currentHealth -= amount;
-			
-			// Set Health Bar
-			// This assumes health bar is int based and not fraction based
-			//healthSlider.value = currentHealth;
-			Debug.Log("Health: " + currentHealth.ToString());
+            // Damage player
+            currentHealth -= amount;
 
-			// Play hurt sound
-			// playerAudio.Play();
-		}
+            // Set Health Bar
+            // This assumes health bar is int based and not fraction based
+            //healthSlider.value = currentHealth;
+            Debug.Log("Health: " + currentHealth.ToString());
 
-		// Check if player is dead
-		if (currentHealth <= 0 && !isDead)
-		{
-			Death();
-		}
-	}
+            // Play hurt sound
+            // playerAudio.Play();
+        }
 
-	// Heal the player - call from other classes
-	public void Heal(int amount)
+        CheckIfDead();
+    }
+
+    private void CheckIfDead()
+    {
+        // Check if player is dead
+        if (currentHealth <= 0 && !isDead)
+        {
+            Death();
+        }
+    }
+
+    // Heal the player - call from other classes
+    public void Heal(int amount)
 	{
 		healed = true;
 
