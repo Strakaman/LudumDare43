@@ -5,6 +5,19 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public bool GameOver = false;
+    private static PlayerHealth s_player = null;
+
+    public PlayerHealth playerGameObject
+    {
+        get
+        {
+            if (s_player == null)
+            {
+                s_player = FindObjectOfType(typeof(PlayerHealth)) as PlayerHealth;
+            }
+            return s_player;
+        }
+    }
 
     #region instance
     private static GameController s_Instance = null;
