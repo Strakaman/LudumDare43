@@ -30,8 +30,11 @@ public class BloodToPlayer : MonoBehaviour
     {
         float distanceCovered = (steps * Time.deltaTime) * speed;
         float fraction = distanceCovered/journeyLength;
-        transform.position = Vector3.Lerp(startPosition, playerPosition, fraction);
-        ++steps;
+        if (journeyLength > 0)
+        {
+            transform.position = Vector3.Lerp(startPosition, playerPosition, fraction);
+            ++steps;
+        }
     }
     
     void FixedUpdate()
