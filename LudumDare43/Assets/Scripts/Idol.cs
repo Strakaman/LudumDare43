@@ -60,6 +60,7 @@ public class Idol : MonoBehaviour
 
                 // Heal player
                 playerHealth.Heal(reward);
+                GetComponent<SoundFxManager>().PlayRandom(GetComponent<AudioSource>());
 
             }
             else

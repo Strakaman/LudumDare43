@@ -19,7 +19,8 @@ public class ForcePushSpell : ISpell
 		GameObject createProjectile = Instantiate(ForceProjectile, spawnPosition, spawnRotation);
 
 		createProjectile.GetComponent<Rigidbody>().velocity = spawnRotation	* (new Vector3(0f, 0f, -projectileSpeed));
-
-	}
+        //createProjectile.GetComponent<AudioSource>().enabled = true;
+        GetComponent<SoundFxManager>().PlayRandom(GetComponent<AudioSource>());
+    }
 
 }
