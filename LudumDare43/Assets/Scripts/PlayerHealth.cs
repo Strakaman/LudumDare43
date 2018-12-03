@@ -71,7 +71,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isDead)
         {
-            GUI.Label(new Rect((Screen.width/2), (Screen.height/2), 400, 100), "RIP");
+           // GUI.Label(new Rect((Screen.width/2), (Screen.height/2), 400, 100), "RIP");
 
         }
     }
@@ -217,8 +217,8 @@ public class PlayerHealth : MonoBehaviour
 	{
 		// Set death flag
 		isDead = true;
-        GameController.instance.GameOver = true;
-        GameController.instance.GameOverScreen.SetActive(true);
+        GameController.instance.DoGameOver();
+
 		Debug.Log("YOU DIED");
 
 		// Disable effects from spellbook
@@ -232,11 +232,6 @@ public class PlayerHealth : MonoBehaviour
 
 		// Disable player controlls, movement, etc
 		playerMovement.enabled = false;
-        Invoke("LoadMenuScene", 5f);
 	}
 
-    void LoadMenuScene()
-    {
-        SceneManager.LoadScene("MainScene");
-    }
 }

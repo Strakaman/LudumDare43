@@ -19,7 +19,7 @@ public class SpellHUDCircleThingy : MonoBehaviour {
     IEnumerator CoolDownGUILoop(int coolDownTime)
     {
         cooldownLabel.gameObject.SetActive( true);
-        spellIcon.color = new Color(25, 25, 25);
+        spellIcon.color = Color.gray;
         while (coolCurrTime < coolDownTime)
         {
             cooldownLabel.text = (coolDownTime- coolCurrTime).ToString();
@@ -27,7 +27,7 @@ public class SpellHUDCircleThingy : MonoBehaviour {
             yield return new WaitForSeconds(1f);
         }
         cooldownLabel.gameObject.SetActive(false);
-        spellIcon.color = new Color(255, 0, 0);
+        spellIcon.color = Color.red;
         yield return null;
     }
 }

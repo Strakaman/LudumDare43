@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     public bool GameOver = false;
     static int latestKills = 0;
+    public int kills = 0;
     private static PlayerHealth s_player = null;
     public Text timerText;
     public GameObject GameOverScreen;
-
+    public Text gameOverDetails;
+    float startTime = 0;
     public PlayerHealth playerGameObject
     {
         get
@@ -21,6 +24,13 @@ public class GameController : MonoBehaviour
             }
             return s_player;
         }
+    }
+
+    void Start()
+    {
+        gameOverDetails = GameOverScreen.GetComponentInChildren<Text>();
+        kills = 0;
+        startTime = Time.time;
     }
 
     void Update()
@@ -44,11 +54,30 @@ public class GameController : MonoBehaviour
         if (!GameOver)
         {
 
-            string minutes = Mathf.Floor(Time.time / 60).ToString("00");
-            string seconds = (Time.time % 60).ToString("00");
+            string minutes = Mathf.Floor((Time.time - startTime) / 60).ToString("00");
+            string seconds = ((Time.time - startTime) % 60).ToString("00");
 
             timerText.text = "Time Alive: " + string.Format("{0}:{1}", minutes, seconds);
         }
+    }
+
+    public void DoGameOver()
+    {
+        GameOver = true;
+        GameOverScreen.SetActive(true);
+        string minutes = Mathf.Floor((Time.time - startTime) / 60).ToString("00");
+        string seconds = ((Time.time - startTime) % 60).ToString("00");
+
+        
+        gameOverDetails.text = "YOU DIED!\nTotal Kills: " + kills+"\nTime Alive: " + string.Format("{0}:{1}", minutes, seconds);
+        Invoke("LoadMenuScene", 5f);
+
+    }
+
+
+    void LoadMenuScene()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 
     #region instance

@@ -110,6 +110,10 @@ public class EnemyHealth : MonoBehaviour
             int blood = Mathf.RoundToInt(Random.Range(0.0f, 5.0f));
             createdBloodParticle.GetComponent<BloodToPlayer>().FillPints(blood);
         }
+        if (!GameController.instance.GameOver) {
+        
+            GameController.instance.kills++;
+        }
 
         Destroy(gameObject);
         GameController.instance.UpdateKillCounter();
