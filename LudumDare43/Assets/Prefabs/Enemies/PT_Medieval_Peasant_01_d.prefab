@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 114774154010979874}
   - component: {fileID: 114525052219479764}
   - component: {fileID: 114024274321237146}
-  - component: {fileID: 82882491756293808}
+  - component: {fileID: 82556881460178910}
   m_Layer: 11
   m_Name: PT_Medieval_Peasant_01_d
   m_TagString: Enemy
@@ -2152,7 +2152,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!82 &82882491756293808
+--- !u!82 &82556881460178910
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2161,7 +2161,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c3175e530dde8934ca3ce57a3f895067, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0774905b49e404ba78f88a47bcbfa984, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2207,7 +2207,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.907
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2292,7 +2292,7 @@ MonoBehaviour:
   currentHealth: 0
   sinkSpeed: 2.5
   scoreValue: 10
-  deathClip: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 0774905b49e404ba78f88a47bcbfa984, type: 3}
   bloodReturn: {fileID: 1872923514639502, guid: 066f597de6dae4562b8c29b6bcbec081,
     type: 2}
 --- !u!114 &114568940632788694
