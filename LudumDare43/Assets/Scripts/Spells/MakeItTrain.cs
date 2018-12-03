@@ -19,6 +19,8 @@ public class MakeItTrain : ISpell
         GameObject createProjectile = Instantiate(TrainDrops, spawnPosition, spawnRotation);
 
         createProjectile.GetComponent<Rigidbody>().velocity = spawnRotation * (new Vector3(0f, 0f, 0f));
+        createProjectile.GetComponent<AudioSource>().enabled = true;
+        GetComponent<SoundFxManager>().PlayRandom(GetComponent<AudioSource>());
     }
 
 }

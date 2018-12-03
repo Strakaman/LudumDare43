@@ -4,7 +4,6 @@ public class SoundFxManager : MonoBehaviour
 {
 
     public AudioClip[] audioClips;
-    public AudioSource audioSource;
 
 	// Use this for initialization
 	void Start()
@@ -18,9 +17,11 @@ public class SoundFxManager : MonoBehaviour
 		
 	}
 
-    public void PlayRandom()
+    public void PlayRandom(AudioSource audioSource)
     {
-        audioSource.clip = audioClips[Mathf.RoundToInt(Random.Range(0f, (audioClips.Length - 1)))];
+        int num = Mathf.RoundToInt(Random.Range(0f, (audioClips.Length - 1)));
+        Debug.Log("Play Train " + num.ToString());
+        audioSource.clip = audioClips[num];
         audioSource.Play();
     }
 }
