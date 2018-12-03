@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     static int latestKills = 0;
     private static PlayerHealth s_player = null;
     public Text timerText;
+    public GameObject GameOverScreen;
 
     public PlayerHealth playerGameObject
     {
@@ -24,6 +25,10 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        if (!GameOver)
+        {
+            GameOverScreen.SetActive(false);
+        }
         if (latestKills >= 4)
         {
             // play Rampage kill sound
@@ -38,7 +43,11 @@ public class GameController : MonoBehaviour
         }
         if (!GameOver)
         {
-            timerText.text = "Time Alive: " +  Time.time.ToString();
+
+            string minutes = Mathf.Floor(Time.time / 60).ToString("00");
+            string seconds = (Time.time % 60).ToString("00");
+
+            timerText.text = "Time Alive: " + string.Format("{0}:{1}", minutes, seconds);
         }
     }
 

@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using Invector.CharacterController;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -216,6 +217,8 @@ public class PlayerHealth : MonoBehaviour
 	{
 		// Set death flag
 		isDead = true;
+        GameController.instance.GameOver = true;
+        GameController.instance.GameOverScreen.SetActive(true);
 		Debug.Log("YOU DIED");
 
 		// Disable effects from spellbook
@@ -229,5 +232,11 @@ public class PlayerHealth : MonoBehaviour
 
 		// Disable player controlls, movement, etc
 		playerMovement.enabled = false;
+        Invoke("LoadMenuScene", 5f);
 	}
+
+    void LoadMenuScene()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
 }
