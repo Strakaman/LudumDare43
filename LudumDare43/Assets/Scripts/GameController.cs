@@ -26,11 +26,11 @@ public class GameController : MonoBehaviour
         {
             // play Rampage kill sound
         }
-        if (latestKills >= 3)
+        else if (latestKills >= 3)
         {
             // play triple kill sound
         }
-        if (latestKills >= 2)
+        else if (latestKills >= 2)
         {
             // play double kill
         }
@@ -56,16 +56,16 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public static void UpdateKillCounter()
+    public void UpdateKillCounter()
     {
         ++latestKills;
-        //int comboSeconds = 3;
-        //Invoke("ResetKillCounter", comboSeconds);
+        int comboSeconds = 3;
+        Invoke("ResetKillCounter", comboSeconds);
     }
 
     void ResetKillCounter()
     {
-        latestKills = 0;
+        --latestKills;
     }
     #endregion
 }

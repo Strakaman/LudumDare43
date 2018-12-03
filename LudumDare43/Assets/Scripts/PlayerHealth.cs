@@ -132,7 +132,7 @@ public class PlayerHealth : MonoBehaviour
             playerHealthBar.ChangeValueCurrent((amount * -1));
             // This assumes health bar is int based and not fraction based
             //healthSlider.value = currentHealth;
-            Debug.Log("Health: " + currentHealth.ToString());
+            //Debug.Log("Health: " + currentHealth.ToString());
 
             // Play hurt sound
             // playerAudio.Play();
@@ -165,7 +165,7 @@ public class PlayerHealth : MonoBehaviour
         playerHealthBar.ChangeValueCurrent(amount);
 		// This assumes health bar is int based and not fraction based
 		//healthSlider.value = currentHealth;
-		Debug.Log("Health: " + currentHealth.ToString());
+		//Debug.Log("Health: " + currentHealth.ToString());
 
 		// Play heal sound
 
@@ -182,7 +182,7 @@ public class PlayerHealth : MonoBehaviour
 
 		// Update Blood HUD
         playerBloodBar.ChangeValueCurrent(amount);
-		Debug.Log("Blood: " + currentBlood.ToString());
+		//Debug.Log("Blood: " + currentBlood.ToString());
 	}
 
 	// Sacrifice method empties as much blood
@@ -194,7 +194,7 @@ public class PlayerHealth : MonoBehaviour
 
 		// Update Blood HUD
         playerBloodBar.SetValueCurrent(0);
-		Debug.Log("Blood: " + currentBlood.ToString());
+		//Debug.Log("Blood: " + currentBlood.ToString());
 
 		return blood;
 	}
@@ -207,7 +207,7 @@ public class PlayerHealth : MonoBehaviour
             AddBlood(other.GetComponent<BloodToPlayer>().Pints);
 			Destroy(other.gameObject);
 
-			Debug.Log("I TASTE BLOOD");
+			//Debug.Log("I TASTE BLOOD");
 		}
 	}
 

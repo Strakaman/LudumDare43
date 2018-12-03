@@ -112,6 +112,7 @@ public class EnemyHealth : MonoBehaviour
         }
 
         Destroy(gameObject);
+        GameController.instance.UpdateKillCounter();
     }
 
 
