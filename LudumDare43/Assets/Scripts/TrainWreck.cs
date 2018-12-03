@@ -5,6 +5,7 @@ using UnityEngine;
 public class TrainWreck : MonoBehaviour {
 
     public int Damage = 100;
+
     private void OnTriggerEnter(Collider other)
     {
         CheckForDamage(other);

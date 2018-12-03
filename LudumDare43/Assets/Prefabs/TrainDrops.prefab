@@ -1334,8 +1334,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4252921505222818}
   - component: {fileID: 54317047003766026}
-  - component: {fileID: 114124602029381378}
   - component: {fileID: 65956310929049804}
+  - component: {fileID: 114064914604252852}
   m_Layer: 0
   m_Name: TrainDrops
   m_TagString: Untagged
@@ -5082,7 +5082,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 7, z: 72}
   m_Center: {x: 0, y: 2, z: -30}
---- !u!114 &114124602029381378
+--- !u!114 &114064914604252852
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5090,7 +5090,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1873735554209054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad598115e876a848be04fe4ec5b572a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9116116a174ebb64594033ea3382b70a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10000
+  lifeSpan: 10
+  Damage: 100
