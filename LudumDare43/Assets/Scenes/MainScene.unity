@@ -5102,7 +5102,22 @@ Prefab:
     - target: {fileID: 82252165064802472, guid: a90ee9a0a54eeb2438f28f411e0a8f8d,
         type: 2}
       propertyPath: MaxDistance
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 82252165064802472, guid: a90ee9a0a54eeb2438f28f411e0a8f8d,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.477
+      objectReference: {fileID: 0}
+    - target: {fileID: 82252165064802472, guid: a90ee9a0a54eeb2438f28f411e0a8f8d,
+        type: 2}
+      propertyPath: m_Pitch
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 82252165064802472, guid: a90ee9a0a54eeb2438f28f411e0a8f8d,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.973
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90ee9a0a54eeb2438f28f411e0a8f8d, type: 2}

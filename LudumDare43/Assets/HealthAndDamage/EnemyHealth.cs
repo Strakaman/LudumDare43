@@ -135,6 +135,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (Time.time - lastTimeHitAudioWasPlayed > AUDIO_REPEAT_FREQUENCY)
         {
+            Debug.Log("death sound played");
             enemyAudio.Play ();
             lastTimeHitAudioWasPlayed = Time.time;
         }
